@@ -1,9 +1,9 @@
 import os
-#def main():
-#    nombre = os.getenv("USERNAME")
-#    print(f"¡Hola, {nombre} desde GitHub!")
+def main():
+    nombre = os.getenv("USERNAME")
+    print(f"Hola, {nombre} desde GitHub ^_^")
 
-#if __name__ == "__main__":
-#    main()
+if __name__ == "__main__":
+    main()
   
-print ("Hola mundo >_<")
+#print ("Hola mundo >_<")

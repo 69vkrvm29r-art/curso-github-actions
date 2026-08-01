@@ -10,4 +10,4 @@ jobs:
       - name: Definir variable #nombre paso 2
         run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
       - name: Correr script #nombre paso 3
-        run: python 
+        run: python S1-hola.py

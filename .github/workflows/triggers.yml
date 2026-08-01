@@ -25,7 +25,7 @@ on:
       nombre: #nombre del segundo input
         description: 'Tu nombre'
         required: true #si es requerido
-        default: Juan
+        default: rvm2
         type: string
   schedule: #quinto triggers
     - cron: '15 22 * * *' #se ejecutara todos los dias 22:15 UTC
@@ -40,7 +40,7 @@ jobs:
       - name: Definir lenguaje #nombre del paso 3
         run: echo "LANGUAGE=${{ inputs.lenguaje_favorito }}" >> $GITHUB_ENV
       - name: Correr script
-        run: python 
+        run: python S2-h_lenguaje.py
   hola-mundo: #nombre del 2 job
     if: ${{ github.event_name != 'workflow_dispatch' }}
     runs-on: ubuntu-latest
@@ -50,4 +50,4 @@ jobs:
       - name: Definir variable
         run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
       - name: Correr script
-        run: python
+        run: python S1-hola.py

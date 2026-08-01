@@ -30,7 +30,7 @@ on:
   schedule: #quinto triggers
     - cron: '15 22 * * *' #se ejecutara todos los dias 22:15 UTC
 jobs:
-  hola-mundo-manual: #nombre del job
+  hola-mundo-manual: #nombre del 1 job
     runs-on: ubuntu-latest #serviosr donde corre el job
     steps:
       - name: Checkout #nombre del paso 1
@@ -41,4 +41,13 @@ jobs:
         run: echo "LANGUAGE=${{ inputs.lenguaje_favorito }}" >> $GITHUB_ENV
       - name: Correr script
         run: python 
-      
+  hola-mundo: #nombre del 2 job
+    if: ${{ github.event_name != 'workflow_dispatch' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Definir variable
+        run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
+      - name: Correr script
+        run: python

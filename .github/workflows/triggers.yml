@@ -28,17 +28,17 @@ on:
         default: Juan
         type: string
   schedule: #quinto triggers
-        - cron: '15 22 * * *' #se ejecutara todos los dias 22:15 UTC
-    jobs:
-      hola-mundo-manual: #nombre del job
-        runs-on: ubuntu-latest #serviosr donde corre el job
-        steps:
-          - name: Checkout #nombre del paso 1
-            uses: actions/checkout@v3 #la accion a realizar
-          - name: Definir nombre #nombre del paso 2
-            run: echo "USERNAME=${{ inputs.nombre }}" >> $GITHUB_ENV #comando a ejecutar
-          - name: Definir lenguaje #nombre del paso 3
-            run: echo "LANGUAGE=${{ inputs.lenguaje_favorito }}" >> $GITHUB_ENV
-          - name: Correr script
-            run: python 
+    - cron: '15 22 * * *' #se ejecutara todos los dias 22:15 UTC
+jobs:
+  hola-mundo-manual: #nombre del job
+    runs-on: ubuntu-latest #serviosr donde corre el job
+    steps:
+      - name: Checkout #nombre del paso 1
+        uses: actions/checkout@v3 #la accion a realizar
+      - name: Definir nombre #nombre del paso 2
+        run: echo "USERNAME=${{ inputs.nombre }}" >> $GITHUB_ENV #comando a ejecutar
+      - name: Definir lenguaje #nombre del paso 3
+        run: echo "LANGUAGE=${{ inputs.lenguaje_favorito }}" >> $GITHUB_ENV
+      - name: Correr script
+        run: python 
       

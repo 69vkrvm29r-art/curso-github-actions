@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Paso1Checkout #nombre del paso 1
         uses: action/checkout@v3 #la accion a ejecutar
-      - name: Definir variable #nombre paso 2
-        run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
+      #- name: Definir variable #nombre paso 2
+      #  run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
       - name: Correr script #nombre paso 3
         run: python S1-hola.py

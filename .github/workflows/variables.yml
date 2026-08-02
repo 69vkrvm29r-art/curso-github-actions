@@ -11,6 +11,6 @@ jobs:
       saludo: hola
     steps:
       - name: Mandar_Saludo
-        run: echo "$saludo, $nombre. Hoy es $dia_semana"
+        run: echo "$saludo, ${{ vars.NOMBRE }}. Hoy es ${{ env.dia_semana }}"
         env:
           nombre: rvm2

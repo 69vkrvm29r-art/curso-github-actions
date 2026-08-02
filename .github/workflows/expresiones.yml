@@ -10,7 +10,7 @@ on:
       nombre:
         description: 'tu nombre'
         required: true
-        default: 'mv'
+        default: 'rvm2'
         type:  string
 jobs:
   mayor:

@@ -10,7 +10,7 @@ on:
       - '**.py' #tipo de archivo o nombre queremos que se active
   issues: #tercer trigger
     types: # el tipo que se usara para que se ejecute el workflow
-     - labeled
+      - labeled
   workflow_dispatch: #cuarto trigger para ejecutra workflow de forma manual
     inputs:
       lenguaje_favorito: #nombre del primer input

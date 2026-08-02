@@ -1,1 +1,16 @@
-
+name: Hola_Variables
+run-name: Aprendiendo Variables
+on: 
+  workflow_dispatch
+env:
+  dia_semana: 月曜日
+jobs:
+  saludo-variables:
+    runs-on: ubuntu-latest
+    env:
+      saludo: hola
+    steps:
+      - name: Mandar_Saludo
+        run: echo "$saludo, $nombre. Hoy es $dia_semana"
+        env:
+          nombre: rvm2
